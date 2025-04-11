@@ -2,11 +2,12 @@ const express = require('express');
 const pa11y = require('pa11y');
 const cors = require('cors');
 
-const app = express();
+const app = express(); // 👈 Dit moet altijd eerst
+
 app.use(cors());
 app.use(express.json());
 
-// Info endpoint voor browsergebruik
+// Vriendelijke info op de root
 app.get('/', (req, res) => {
   res.send('✅ Pa11y API is online. Gebruik POST /scan met JSON { "url": "..." }');
 });
