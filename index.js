@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Info endpoint voor de browser
 app.get('/', (req, res) => {
-  res.send('✅ Pa11y API is online. Gebruik POST /scan met JSON { "url": "..." }. Voeg optioneel ?offset=0 toe voor paginering.");
+  res.send('✅ Pa11y API is online. Gebruik POST /scan met JSON { \"url\": \"...\" }. Voeg optioneel ?offset=0 toe voor paginering.');
 });
 
 const scanCache = new Map(); // eenvoudige cache per sessie (niet persistent)
